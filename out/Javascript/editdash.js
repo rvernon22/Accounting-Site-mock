@@ -1,13 +1,6 @@
 const firebaseConfig = {
-    apiKey: "AIzaSyD-5nVphj5o2vXoDy6Ld1yFGc5phrhteNA",
-    authDomain: "precisebooks-c6758.firebaseapp.com",
-    databaseURL: "https://precisebooks-c6758-default-rtdb.firebaseio.com",
-    projectId: "precisebooks-c6758",
-    storageBucket: "precisebooks-c6758.appspot.com",
-    messagingSenderId: "107559096811",
-    appId: "1:107559096811:web:bc76d562a34a2ba0de09ae",
-    measurementId: "G-YNQ0G9QRCM"
-  };
+ //private credentials
+};
   // Initialize Firebase
   firebase.initializeApp(firebaseConfig);
   // Initialize variables
