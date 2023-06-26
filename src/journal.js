@@ -1,13 +1,6 @@
-var firebaseConfig = {
-    apiKey: "AIzaSyBWpF4OjwvJ_jTku6QT18MoA078UNo1GDk",
-    authDomain: "project-demo-249e9.firebaseapp.com",
-    databaseURL: "https://project-demo-249e9-default-rtdb.firebaseio.com",
-    projectId: "project-demo-249e9",
-    storageBucket: "project-demo-249e9.appspot.com",
-    messagingSenderId: "489620783719",
-    appId: "1:489620783719:web:fcc19378b7429476a38ac2",
-    measurementId: "G-85Y0XZ34FP"
-  };
+const firebaseConfig = {
+ //private credentials
+};
   // Initialize Firebase
   firebase.initializeApp(firebaseConfig);
   // Initialize variables
