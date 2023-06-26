@@ -1,0 +1,217 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  body
+  {
+    background: #c2c4b7;
+  }
+  
+  .userCirc a
+  {
+    position: absolute;
+    top: 2%;
+    left: 93%;
+    text-decoration: none;
+  
+  }
+  .userCirc label
+  {
+      font-size: 20px;
+  }
+  
+  .userCirc i
+  {
+      font-size: 35px;
+  }
+  
+  .sidebar
+  {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 260px;
+    background: #211d30;
+    z-index: 100;
+    transition: all 0.5s ease;
+  }
+  
+  .sidebar.close
+  {
+    width: 78px;
+  }
+  
+  .sidebar .FAKE-precisebook-logo
+  {
+    height: 60px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+  }
+  
+  .sidebar .FAKE-precisebook-logo i
+  {
+    font-size: 30px;
+    color: white;
+    height: 50px;
+    min-width: 78px;
+    text-align: center;
+    line-height: 50px;
+  }
+  
+  .sidebar .FAKE-precisebook-logo .logo_Title
+  {
+    font-size: 22px;
+    color: white;
+    font-weight: 600;
+    transition: 0.3s ease;
+    transition-delay: 0.1s;
+  }
+  
+  .sidebar.close .FAKE-precisebook-logo .logo_Title
+  {
+    transition-delay: 0s;
+    opacity: 0;
+    pointer-events: none;
+  }
+  
+  .sidebar .side_Links
+  {
+    height: 100%;
+    padding: 30px 0 150px 0;
+    overflow: auto;
+  }
+  
+  .sidebar.close .side_Links
+  {
+    overflow: visible;
+  }
+  
+  .sidebar .side_Links li
+  {
+    position: relative;
+    list-style: none;
+    transition: all 0.4s ease;
+  }
+  
+  .sidebar .side_Links li:hover
+  {
+    background: #4c4877;
+    border-radius: 25px;
+  }
+  
+  .sidebar .side_Links li i
+  {
+    height: 50px;
+    min-width: 78px;
+    text-align: center;
+    line-height: 50px;
+    color: white;
+    font-size: 30px;
+    cursor: pointer;
+    transition: all 0.5s ease;
+  }
+  
+  .sidebar .side_Links li a
+  {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+  }
+  
+  .sidebar .side_Links li a .link_Text
+  {
+    font-size: 18px;
+    font-weight: 400;
+    color: #fff;
+    transition: all 0.4s ease;
+  }
+  
+  .sidebar.close .side_Links li a .link_Text
+  {
+    opacity: 0;
+    pointer-events: none;
+  }
+  
+  .pull_Out
+  {
+    position: relative;
+    height: 100vh;
+    left: 260px;
+    width: calc(100% - 260px);
+    transition: all 0.5s ease;
+  }
+  
+  .sidebar.close ~ .pull_Out
+  {
+    left: 78px;
+    width: calc(100% - 78px);
+  }
+  
+  .pull_Out .pull_Tab
+  {
+    height: 60px;
+    display: flex;
+    align-items: center;
+  }
+  
+  .pull_Out .pull_Tab i:hover
+  {
+    border-radius: 100px;
+    background: #85867e;
+  }
+  
+  .pull_Out .pull_Tab .bx-arrow-from-left,
+  .pull_Out .pull_Tab .pull_Text
+  {
+    color: #11101d;
+    font-size: 30px;
+  }
+  
+  .pull_Out .pull_Tab .bx-arrow-from-left
+  {
+    margin: 0 15px;
+    cursor: pointer;
+  }
+  
+  .pull_Out .pull_Tab .pull_Text
+  {
+    font-size: 26px;
+    font-weight: 600;
+  }
+  
+  @media (max-width: 400px) 
+  {
+    .sidebar.close ~ .pull_Out{
+      width: 100%;
+      left: 0;
+    }
+    .sidebar.close{
+      width: 0;
+    }
+    .sidebar{
+      width: 78px;
+    }
+    .pull_Out{
+      left: 78px;
+      width: calc(100% - 78px);
+      z-index: 100;
+    }
+    
+  }
+.chart
+{
+position:absolute; 
+top:1%;
+left:20%;
+margin: 100px auto;
+width: 900px;
+height: 400px;
+}
+.header{
+    position:absolute;
+    top:8%;
+    left:21%;
+  }

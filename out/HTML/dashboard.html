@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang = "en">
+<head>
+    <meta charset="UTF-8">
+    <meta name = "viewport" content = "width=device-width, initial-scale = 1.0"> <!-- Viewing html code-->
+    
+    <title>Precise Books</title> <!-- Name of website -->
+    
+    <!--Uses a site called bloxicons for a ton of free icons for web dev-->
+    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="..\CSS\dashboard.css"> <!--Calls css-->
+
+    <script src = "\Javascript\website.js"></script> <!-- calls scripts-->
+    <script type = "application/json" src = "/bundle.js"> </script> <!--Declaring scripts for site-->
+</head>
+<body>
+    <div class="sidebar"> <!--I thought in my learning exp, you could name the class anything, and thats why it didnt work for hours because I named it navbar instead-->
+        <div class="FAKE-precisebook-logo">
+            <i class='bx bxs-book-open'></i> <!--Logo picture-->
+          <span class="logo_Title">Precise Books</span> <!--Company name using inline element span to stay on same line-->
+        </div>
+        <ul class="side_Links"> <!-- Links on side of the sidebar to move through future pages-->
+          <li>
+            <a href="homepage.html">
+                <i class='bx bxs-dashboard' ></i>
+              <span class="link_Text">Dashboard</span> <!--Sidebar link-->
+            </a>
+          </li>
+          <li>
+            <a href="dashboard.html">
+              <i class='bx bxs-user-detail'></i>
+              <span class="link_Text">Admin</span> <!--Sidebar link-->
+            </a>
+          </li>
+          <li>
+            <a href="accountsboard.html">
+              <i class='bx bxs-door-open' ></i>
+              <span class="link_Text">Accounting</span> <!--Sidebar link-->
+            </a>
+          </li>
+          <li>
+            <a href = "journal.html">
+            <i class='bx bx-calculator' ></i>
+            <span class="link_Text">Journal</span> <!--Sidebar link-->
+          </li>
+          <li>
+            <a href="help.html">
+                <i class='bx bx-question-mark' ></i> <!--Logo picture-->
+              <span class="link_Text">FAQ</span> <!--Sidebar link-->
+            </a>
+          </li>
+          <li>
+            <a href="event log.html">
+              <i class='bx bx-clipboard'></i> <!--Logo picture-->
+              <span class="link_Text">Event Log</span> <!--Sidebar link-->
+            </a>
+          </li>
+          <li>
+            <a href="journalSearch.html">
+              <i class='bx bx-list-ul'></i> <!--Logo picture-->
+              <span class="link_Text">Journal View</span> <!--Sidebar link-->
+            </a>
+          </li>
+          <li>
+            <a href="ledger.html">
+                <i class='bx bx-spreadsheet' ></i> <!--Logo picture-->
+              <span class="link_Text">Ledger</span> <!--Sidebar link-->
+            </a>
+          </li>
+          <li>
+            <a href="accountSearch.html">
+              <i class='bx bx-credit-card-front'></i> <!--Logo picture-->
+              <span class="link_Text">Chart of Account View</span> <!--Sidebar link-->
+            </a>
+          </li>
+        </ul>
+      </div>
+    
+      <section class="pull_Out"> <!--Sidebar pull out-->
+        <div class="pull_Tab">
+          <i class='bx bx-arrow-from-left' onclick="sidebarToggle()"></i> <!--Slide menu icon -->
+          <span class="pull_Text"></span> <!--Text name-->
+        </div>
+      </section>
+       
+    
+      <div class = "userCirc">  <!--Username circle in the top right corner-->
+        <a href = "#">
+          <label for = username id = "username"> Username </label> <!-- Username text on right hand side-->
+          <i class='bx bx-user-circle' ></i> <!--Logo picture-->
+        </a>
+      </div>
+    
+    <script>
+  let sidebar = document.querySelector(".sidebar"); <!--Allows the side bar to move back and forth with javascript-->
+  let sidebarBtn = document.querySelector(".bx-arrow-from-left");
+  sidebarBtn.addEventListener("click", ()=>{
+    sidebar.classList.toggle("close");
+  });
+  
+  </script>
+
+    <main>
+      <section class="table__header"></section>
+      <section class="table__body">
+        <table class="userTable">
+          <thead> <!--Table headers-->
+            <tr>
+              <th>Status</th>
+              <th>rank</th>
+              <th>User</th>
+              <th>Email</th>
+              <th>Role</th>
+              <th>Add</th>
+              <th>Edit</th>
+              <th>Suspend</th>
+            </tr>
+          </thead>
+          <tbody id="tbody1">
+            
+          </tbody>
+        </table>
+
+      </section>
+      <div class="container"> <!--Body stuff-->
+        <div class="popup" id="add-popup">
+         <form>
+          <div>
+            <label for="FirstName">First Name</label>
+            <input type="text" name="FirstName", id="FirstName" placeholder="ex.) John" required>
+          </div>
+          <div>
+            <label for="LastName">Last Name</label>
+            <input type="text" name="LastName", id="LastName" placeholder="ex.) Smith" required>
+          </div>
+          <div>
+            <label for="DOB">DOB</label>
+            <input type="date" name="DOB" id="DOB" required>
+          </div>
+          <div>
+            <label for="Username">Username</label>
+            <input type="text" name="username" id="Username" placeholder="ex.) JSmith37">
+          </div>
+          <div>
+            <label>Password</label>
+            <input type = "password" id = "Password" name = "Password" autocomplete ="new-password" 
+            placeholder = "Password" pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%^&*_=+-]).{8,24}$" required>
+          </div>
+          <div>
+            <label>Email</label>
+            <input type="email" name="Email" id="Email" required>
+          </div>
+          <div>
+            <label>Address</label>
+            <input type="text" name="Adress" id="Address" required>
+          </div>
+          <div>
+            <label for = "q1"> First school?</label>
+            <input type = "text" id = "q1" name = "q1" autocomplete = "q1" placeholder = "answer"/><br>
+            <label for = "q2"> First car?</label>
+            <input type = "text" id = "q2" name = "q2" autocomplete = "q2" placeholder = "answer"/><br>
+          </div>
+          <div>
+            <label for="Role">Role</label>
+            <select name = Role id = "Role">
+              <option value = "Admin"> Admin </option> 
+              <option value = "Manager"> Mangager</option>
+              <option value = "User"> User</option>
+          </select>
+          </div>
+          <div>
+            <button type="button" id="submitButton" onclick="addButton()" >Submit</button>
+          </div>
+         </form>
+        </div>
+      </div>
+
+      <div class = "container"> <!--this is the popup html for the edit button-->
+        <div class = "popup" id = "edit-popup">
+          <form>
+            <div>
+              <label for="FirstName">First Name</label>
+              <input type="text" name="FirstName", id="eFirstName" placeholder="ex.) John" required>
+            </div>
+            <div>
+              <label for="LastName">Last Name</label>
+              <input type="text" name="LastName", id="eLastName" placeholder="ex.) Smith" required>
+            </div>
+            <div>
+              <label for="DOB">DOB</label>
+              <input type="date" name="DOB" id="eDOB" required>
+            </div>
+            <div>
+              <label for="Username">Username</label>
+              <input type="text" name="username" id="eUsername" placeholder="ex.) JSmith37">
+            </div>
+            <div>
+              <label>Password</label>
+              <input type = "password" id = "ePassword" name = "Password" autocomplete ="new-password" 
+              placeholder = "Password" pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%^&*_=+-]).{8,24}$" required>
+            </div>
+            <div>
+              <label>Email</label>
+              <input type="email" name="Email" id="eEmail" required>
+            </div>
+            <div>
+              <label>Address</label>
+              <input type="text" name="Address" id="eAddress" required>
+            </div>
+            <div>
+              <label for = "q1"> First school?</label>
+              <input type = "text" id = "eq1" name = "q1" autocomplete = "q1" placeholder = "answer"/><br>
+              <label for = "q2"> First car?</label>
+              <input type = "text" id = "eq2" name = "q2" autocomplete = "q2" placeholder = "answer"/><br>
+            </div>
+            <div>
+              <label for="Role">Role</label>
+              <select name = Role id = "eRole">
+                <option value = "Admin"> Admin </option> 
+                <option value = "Manager"> Mangager</option>
+                <option value = "User"> User</option>
+            </select>
+            </div>
+            <div>
+              <button type="button" id="esubmitButton" onclick="editButton()" >Submit</button>
+            </div>
+           </form>
+        </div>
+      </div>
+
+    </main>
+    
+</body>
+<script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-database.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-storage.js"></script>
+<script src = "..\Javascript\dashboard.js"></script> <!-- calls scripts-->
+</html>

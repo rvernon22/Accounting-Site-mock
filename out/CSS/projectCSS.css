@@ -1,0 +1,171 @@
+*:focus 
+  {
+    outline: none;
+  }
+  
+  body  /* css for body text*/
+  {
+    margin: 0;
+    padding: 0;
+    background: #c2c4b7;
+    font-size: 16px;
+    color: #222;
+    font-weight: 300;
+  }
+  
+  .FAKE-precisebook-logo /* css for logo*/
+  {
+    position: fixed;
+    left: 50px;
+    top: 75px;
+    height: 60px;
+    width: 100%;
+    /* align-items: center;*/
+  }
+  
+  .FAKE-precisebook-logo i /* css for logo*/
+  {
+    font-size: 50px;
+    color: white;
+    height: 50px;
+    text-align: center;
+    line-height: 50px;
+  }
+
+  .FAKE-precisebook-logo .logo_Title /* css for logo*/
+{
+  font-size: 50px;
+  color: white;
+  font-weight: 600;
+}
+
+  #Login  /* aspects of the login box that holds all of the input items */
+  {
+    position: fixed;
+    margin: 5% auto;
+    width: 400px;
+    height: 600px;
+    bottom: -50px;
+    left: 450px;
+    background: rgb(212, 212, 212);
+    /*border-radius: 10px;*/
+    box-shadow: 5px 10px 18px #000000ee;
+  }
+  
+  .left 
+  {
+    position: absolute;
+    top: 0;
+    left: 0;
+    box-sizing: border-box;
+    padding: 40px;
+    width: 300px;
+    height: 400px;
+  }
+  
+  h2 {
+    margin-left: 125px;
+  }
+
+  label
+  {
+    margin-left: 100px;
+  }
+
+  select
+  { 
+    margin-left: 10px;
+  }
+
+  input[type = "date"] /* aspects of the date of birth calender input type */
+  {
+    margin-top: 5% auto;
+    margin-left: 95;
+  }
+
+  input[type="text"], input[type="password"]  /* position and shape and color of input the types "text" and "password"  */
+  {
+    display: block;
+    box-sizing: border-box;
+    margin-bottom: 10px;
+    margin-left: 80px;
+    padding: 15px;
+    width: 220px;
+    height: 32px;
+    right: 20px ;
+    border: none;
+    border-bottom: 1px solid #AAA;
+    border-radius: 20px;
+    font-weight: 400;
+    font-size: 15px;
+    transition: 0.2s ease;
+  }
+  
+  input[type="text"]:focus, input[type="password"]:focus  /* tells all the input types labeled "text or password" how to act when clicked on */
+  {
+    border-bottom: 2px solid #16a085;
+    color: #16a085;
+    transition: 0.2s ease;
+  }
+  
+  button  /* all the position, color and shape controls for the submit button*/
+  {
+    margin-top: 30px;
+    margin-left: 125px;
+    width: 120px;
+    height: 32px;
+    background: #16a085;
+    border: none;
+    border-radius: 20px;
+    color: #FFF;
+    text-transform: uppercase;
+    transition: 0.5s ease;
+    cursor: pointer;
+  }
+  
+  input[type="submit"]:hover, input[type="submit"]:focus  /* tells the submit button how to act when mouse is hovering over */
+  {
+    opacity: 0.8;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+    transition: 0.1s ease;
+  }
+  
+  input[type="submit"]:active 
+  {
+    opacity: 1;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.4);
+    transition: 0.1s ease;
+  }
+
+#DOB /* Calendar movement to make it look good*/
+{
+  margin-left: 30px;
+}
+
+#login_page /*Controls the aspects of the LINK that leads to the login page*/
+{
+  margin-left: 100px;
+}
+
+#toggleCheckbox
+{
+  position:relative;
+  left: 25px; /*Moved it below text field password */
+}
+
+#user{ /*#user used to move the text "User Type" around*/
+  position: relative;
+  top: 20px;
+  bottom: -50px;
+}
+
+#user_Type { /*this is used to move the drop down menu around*/
+  position: relative;
+  top:20px;
+  bottom: -50px;
+}
+
+.alert { /*Make all alerts red and bold*/
+  color: red;
+  font-weight: bold;
+}

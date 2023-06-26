@@ -1,0 +1,47 @@
+<html>
+<head>
+    <title>Login Page </title>
+    <link rel = "stylesheet" href="\CSS\loginCSS.css">
+    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+</head>
+
+    <body>
+
+<div class="FAKE-precisebook-logo">
+     <i class='bx bxs-book-open'></i>
+        <span class="logo_Title">Precise Books</span>
+</div>
+<div id = "Login">
+    <div class = "Center">
+        <h2> Log in here</h2>
+        <input type = "text" id = "email" name = "email" autocomplete = "email" placeholder = "email"/>
+        <input type = "password" id = "password" name = "password" autocomplete ="current-password" placeholder = "password"/>
+        
+        <label id = "toggleCheckbox">
+            <input type="checkbox" onclick="passwordToggle()">Show Password</input>
+        </label>
+        
+        <div id = "button">
+            <button onclick = "login()"> Sign up</button>
+        </div>
+
+        <a href= "/HTML/signuppage.html" id = "signup_Page"> Dont Have an account? </a> <br>
+        <a href= "/HTML/passreset.html" id = "pass_reset"> Forgot Password?</a>
+    </div>
+
+</div>
+
+</body>
+<!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-app.js"></script>
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+<script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-database.js"></script>
+
+<!-- Our script must be loaded after firebase references -->
+<script src="..\Javascript\login.js"></script>
+
+
+</html>

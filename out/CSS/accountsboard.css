@@ -1,0 +1,414 @@
+ /* Google Fonts Import Link */
+
+ *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  body /*Body css */
+  {
+    background: #c2c4b7;
+    overflow: hidden;
+  }
+
+  .timeClock /*Clock */
+  {
+    position: absolute;
+    bottom: 15%;
+    left: 50%;
+  } 
+  .timeClock h1 /*Clock header */
+  {
+    position: absolute;
+    bottom: -20%;
+    left: 110%;
+    width: 200px;
+    font-size:x-large;
+    font-family: sans-serif;
+  }
+  
+  
+  .userCirc a /*User circle picture css */
+  {
+    position: absolute;
+    top: 2%;
+    left: 93%;
+    text-decoration: none;
+  
+  }
+
+  .userCirc label /*User circle picture css */
+  {
+      font-size: 20px;
+  }
+  
+  .userCirc i /*User circle picture css */
+  {
+      font-size: 35px;
+  }
+  
+  .sidebar /*Sidebar css */
+  {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 260px;
+    background: #211d30;
+    z-index: 100;
+    transition: all 0.5s ease;
+  }
+  
+  .sidebar.close /*Sidebar css */
+  {
+    width: 78px;
+  }
+  
+  .sidebar .FAKE-precisebook-logo /*Sidebar css + logo*/
+  {
+    height: 60px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+  }
+  
+  .sidebar .FAKE-precisebook-logo i /*Sidebar css + logo*/
+  {
+    font-size: 30px;
+    color: white;
+    height: 50px;
+    min-width: 78px;
+    text-align: center;
+    line-height: 50px;
+  }
+  
+  .sidebar .FAKE-precisebook-logo .logo_Title /*Sidebar css + logo*/
+  {
+    font-size: 22px;
+    color: white;
+    font-weight: 600;
+    transition: 0.3s ease;
+    transition-delay: 0.1s;
+  }
+  
+  .sidebar.close .FAKE-precisebook-logo .logo_Title /*Sidebar css + logo*/
+  {
+    transition-delay: 0s;
+    opacity: 0;
+    pointer-events: none;
+  }
+  
+  .sidebar .side_links /*Sidebar css + links*/
+  {
+    height: 100%;
+    padding: 30px 0 150px 0;
+    overflow: auto;
+  }
+  
+  .sidebar.close .side_links /*Sidebar css + links*/
+  {
+    overflow: visible;
+  }
+  
+  .sidebar .side_links li /*Sidebar css + links*/
+  {
+    position: relative;
+    list-style: none;
+    transition: all 0.4s ease;
+  }
+  
+  .sidebar .side_links li:hover /*Sidebar css + links*/
+  {
+    background: #4c4877;
+    border-radius: 25px;
+  }
+  
+  .sidebar .side_links li i /*Sidebar css + links*/
+  {
+    height: 50px;
+    min-width: 78px;
+    text-align: center;
+    line-height: 50px;
+    color: white;
+    font-size: 30px;
+    cursor: pointer;
+    transition: all 0.5s ease;
+  }
+  
+  .sidebar .side_links li a /*Sidebar css + links*/
+  {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+  }
+  
+  .sidebar .side_links li a .link_Text /*Sidebar css + links*/
+  {
+    font-size: 18px;
+    font-weight: 400;
+    color: #fff;
+    transition: all 0.4s ease;
+  }
+  
+  .sidebar.close .side_links li a .link_Text /*Sidebar css + links*/
+  {
+    opacity: 0;
+    pointer-events: none;
+  }
+  
+  .pull_Out /*pull out for sidebar css*/
+  {
+    position: relative;
+    height: 100vh;
+    left: 260px;
+    width: calc(100% - 260px);
+    transition: all 0.5s ease;
+  }
+  
+  .sidebar.close ~ .pull_Out /*pull out for sidebar css*/
+  {
+    left: 78px;
+    width: calc(100% - 78px);
+  }
+  
+  .pull_Out .pull_Tab /*pull out for sidebar css*/
+  {
+    height: 60px;
+    display: flex;
+    align-items: center;
+  }
+  
+  .pull_Out .pull_Tab i:hover /*pull out for sidebar css*/
+  {
+    border-radius: 100px;
+    background: #85867e;
+  }
+  
+  .pull_Out .pull_Tab .bx-arrow-from-left, /*pull out for sidebar css*/
+  .pull_Out .pull_Tab .pull_Text
+  {
+    color: #11101d;
+    font-size: 30px;
+  }
+  
+  .pull_Out .pull_Tab .bx-arrow-from-left /*pull out for sidebar css*/
+  {
+    margin: 0 15px;
+    cursor: pointer;
+  }
+  
+  .pull_Out .pull_Tab .pull_Text /*pull out for sidebar css*/
+  {
+    font-size: 26px;
+    font-weight: 600;
+  }
+  
+  @media (max-width: 400px) 
+  {
+    .sidebar.close ~ .pull_Out{ /*pull out for sidebar css*/
+      width: 100%;
+      left: 0;
+    }
+    .sidebar.close{
+      width: 0;
+    }
+    .sidebar{
+      width: 78px;
+    }
+    .pull_Out{
+      left: 78px;
+      width: calc(100% - 78px);
+      z-index: 100;
+    }
+    
+  }
+
+  .userTable    /* Spacing and sizing for the table */
+  {
+    position:absolute;
+    border-collapse: collapse;
+    font-size: 1.0em;
+    min-width: 400px;
+    overflow: auto;
+    top: 10%;
+    left: 5%;
+  }
+
+  .AccDescTable { /*for acc description id selects only tables */
+
+    transform: translate(-11%, 0%);
+  }
+
+  .button button    /* Attributes about the two buttons at bottom */
+  {
+    position: absolute;
+    top: 600px;
+    right: 100px;
+    width: 110px;
+    height: 50px;
+    background-color: rgb(115, 212, 115);
+  }
+
+  .ebutton button  /*css for button*/
+  {
+    position: absolute;
+    top: 670px;
+    right: 100px;
+    width: 110px;
+    height: 50px;
+    background-color: rgb(115, 212, 115);
+
+  }
+  .hbutton button  /*css for button*/
+  {
+    position: absolute;
+    top: 740px;
+    right: 100px;
+    width: 110px;
+    height: 50px;
+    background-color: rgb(195, 235, 52);
+  }
+
+  .userTable thead tr   /* Google Fonts Import Link */
+  {
+    background-color: #211d30;
+    color: white;
+    text-align: left;
+    font-weight: bold;
+  }
+
+  .userTable th,
+  .userTable td /* Width and length of the category bar */
+  {
+    padding: 12px 37px;
+  }
+
+  .userTable tbody tr   /*css for button*/
+  {
+    border-bottom: 1px solid rgb(0, 0, 0);
+  }
+
+  input[type = "text"]  /* attributes of the table elements since all are text inputs */
+  {
+    position: relative;
+    bottom: 800px;
+    left: 225%;
+      /* bottom: 800px; */
+      /*left: 285px;  */
+    width: 125px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+
+  input[type = "number"]  /* attributes of the table elements since all are text inputs */
+  {
+    position: relative;
+    bottom: 800px;
+    left: 225%;
+      /* bottom: 800px; */
+      /*left: 285px;  */
+    width: 125px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+
+  .tooltip /*css for tool tip when hovering over side button*/
+  {
+    position: relative;
+    display: inline-block;
+    border-bottom: 2px dotted purple;
+    bottom: 750px;
+    left: 82%;
+  }
+
+  .tooltip2 /*css for tool tip when hovering over side button*/
+  {
+    position: relative;
+    display: inline-block;
+    border-bottom: 2px dotted purple;
+    bottom: 690px;
+    left: 82%;
+  }
+
+  .tooltip .tiptext /*css for tool tip when hovering over side button*/
+  {
+    position: absolute;
+    z-index: 1;
+    top: -5px;
+    right: 105%;
+    visibility: hidden;
+    width: 100px;
+    background-color: #211d30;
+    color: white;
+    text-align: center;
+    border-radius: 15%;
+    padding: 3px;
+    
+  }
+ 
+  .tooltip .tooltext /*css for tool tip when hovering over side button*/
+  {
+    position: absolute;
+    z-index: 1;
+    top: -5px;
+    right: 105%;
+    visibility: hidden;
+    width: 200px;
+    background-color: #211d30;
+    color: white;
+    text-align: center;
+    border-radius: 15%;
+    padding: 3px;
+  }
+
+  .tooltip:hover .tiptext /*css for tool tip when hovering over side button*/
+  {
+    visibility: visible;
+  }
+
+
+
+  .tooltip2 .tiptext2 /*css for tool tip when hovering over side button*/
+  {
+    position: absolute;
+    z-index: 1;
+    top: -5px;
+    right: 105%;
+    visibility: hidden;
+    width: 100px;
+    background-color: #211d30;
+    color: white;
+    text-align: center;
+    border-radius: 15%;
+    padding: 3px;
+    
+  }
+
+  .tooltip2 .tooltext2 /*css for tool tip when hovering over side button*/
+  {
+    position: absolute;
+    z-index: 1;
+    top: -5px;
+    right: 105%;
+    visibility: hidden;
+    width: 200px;
+    background-color: #211d30;
+    color: white;
+    text-align: center;
+    border-radius: 15%;
+    padding: 3px;
+  }
+
+  .tooltip2:hover .tiptext2 /*css for tool tip when hovering over side button*/
+  {
+    visibility: visible;
+  }
+
+  .alert { /*Make all alerts red and bold*/
+    color: red;
+    font-weight: bold;
+  }

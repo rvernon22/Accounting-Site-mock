@@ -1,0 +1,446 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  body /*css for body*/
+  {
+    background: #c2c4b7;
+    text-align: center;
+  }
+  
+  .accountText /*css for accounting text*/
+  {
+    position: absolute;
+    top: 17vh;
+    right: 121vh;
+    font-size: x-large;
+  
+  }
+  
+  
+  .accountText button /*css for accounting text button*/
+  {
+    position: absolute;
+    margin-left: 10px;
+    width: 50px;
+    height: 25px;
+    background-color: rgb(115, 212, 115);
+    overflow: visible;
+  }
+  
+  .userCirc a /*css for user button*/
+  {
+    position: absolute;
+    top: 2%;
+    left: 93%;
+    text-decoration: none;
+  
+  }
+  .userCirc label /*css for user button*/
+  {
+      font-size: 20px;
+  }
+  
+  .userCirc i /*css for user button*/
+  {
+      font-size: 35px;
+  }
+  
+  .sidebar /*css for sidebar*/
+  {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 260px;
+    background: #211d30;
+    z-index: 100;
+    transition: all 0.5s ease;
+  }
+  
+  .sidebar.close /*css for sidebar*/
+  {
+    width: 78px;
+  }
+  
+  .sidebar .FAKE-precisebook-logo /*css for sidebar + logo*/
+  {
+    height: 60px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+  }
+  
+  .sidebar .FAKE-precisebook-logo i /*css for sidebar + logo*/
+  {
+    font-size: 30px;
+    color: white;
+    height: 50px;
+    min-width: 78px;
+    text-align: center;
+    line-height: 50px;
+  }
+  
+  .sidebar .FAKE-precisebook-logo .logo_Title /*css for sidebar + logo*/
+  {
+    font-size: 22px;
+    color: white;
+    font-weight: 600;
+    transition: 0.3s ease;
+    transition-delay: 0.1s;
+  }
+  
+  .sidebar.close .FAKE-precisebook-logo .logo_Title /*css for sidebar + logo*/
+  {
+    transition-delay: 0s;
+    opacity: 0;
+    pointer-events: none;
+  }
+  
+  .sidebar .side_links /*css for sidebar + logo*/
+  {
+    height: 100%;
+    padding: 30px 0 150px 0;
+    overflow: auto;
+  }
+  
+  .sidebar.close .side_links /*css for sidebar + logo*/
+  {
+    overflow: visible;
+  }
+  
+  .sidebar .side_links li /*css for sidebar + logo*/
+  {
+    position: relative;
+    list-style: none;
+    transition: all 0.4s ease;
+  }
+  
+  .sidebar .side_links li:hover /*css for sidebar + logo*/
+  {
+    background: #4c4877;
+    border-radius: 25px;
+  }
+  
+  .sidebar .side_links li i /*css for sidebar + logo*/
+  {
+    height: 50px;
+    min-width: 78px;
+    text-align: center;
+    line-height: 50px;
+    color: white;
+    font-size: 30px;
+    cursor: pointer;
+    transition: all 0.5s ease;
+  }
+  
+  .sidebar .side_links li a /*css for sidebar + logo*/
+  {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+  }
+  
+  .sidebar .side_links li a .link_Text /*css for sidebar + logo*/
+  {
+    font-size: 18px;
+    font-weight: 400;
+    color: #fff;
+    transition: all 0.4s ease;
+  }
+  
+  .sidebar.close .side_links li a .link_Text /*css for sidebar + logo*/
+  {
+    opacity: 0;
+    pointer-events: none;
+  }
+  
+  .pull_Out /*css for sidebar pull out*/
+  {
+    position: relative;
+    height: 100vh;
+    left: 260px;
+    width: calc(100% - 260px);
+    transition: all 0.5s ease;
+  }
+  
+  .sidebar.close ~ .pull_Out /*css for sidebar pull out*/
+  {
+    left: 78px;
+    width: calc(100% - 78px);
+  }
+  
+  .pull_Out .pull_Tab /*css for sidebar pull out*/
+  {
+    height: 60px;
+    display: flex;
+    align-items: center;
+  }
+  
+  .pull_Out .pull_Tab i:hover /*css for sidebar pull out*/
+  {
+    border-radius: 100px;
+    background: #85867e;
+  }
+  
+  .pull_Out .pull_Tab .bx-arrow-from-left, /*css for sidebar pull out*/
+  .pull_Out .pull_Tab .pull_Text
+  {
+    color: #11101d;
+    font-size: 30px;
+  }
+  
+  .pull_Out .pull_Tab .bx-arrow-from-left /*css for sidebar pull out*/
+  {
+    margin: 0 15px;
+    cursor: pointer;
+  }
+   
+  .pull_Out .pull_Tab .pull_Text /*css for sidebar pull out*/
+  {
+    font-size: 26px;
+    font-weight: 600;
+  }
+  
+  @media (max-width: 400px) 
+  {
+    .sidebar.close ~ .pull_Out{ /*css for sidebar pull out*/
+      width: 100%;
+      left: 0;
+    }
+    .sidebar.close{
+      width: 0;
+    }
+    .sidebar{
+      width: 78px;
+    }
+    .pull_Out{
+      left: 78px;
+      width: calc(100% - 78px);
+      z-index: 100;
+    }
+    
+  }
+  
+  .userTable    /* Spacing and sizing for the table */
+  {
+    position: absolute;
+    margin-left: auto;
+    margin-right: auto;
+    border-collapse: collapse;
+    font-size: 1.0em;
+    min-width: 1000px;
+    overflow: hidden;
+    top: 20vh;
+    left: 10vh;
+  }
+  .userTable tr:hover /* Spacing and sizing for the table */
+  {
+    background-color: #a5a79d;
+  }
+  .userTable th /* Spacing and sizing for the table */
+  {
+    background-color: #211d30;
+  }
+  
+  .userTable thead tr   /* Google Fonts Import Link */
+  {
+    background-color: #211d30;
+    color: white;
+    text-align: center;
+    font-weight: bold;
+  }
+  
+  .userTable th,
+  .userTable td /* Width and length of the category bar */
+  {
+    padding: 12px 2px;
+    text-align: left;
+  }
+
+  
+  .userTable tbody tr   /* Spacing and sizing for the table */
+  {
+    border-bottom: 1px solid rgb(0, 0, 0);
+  }
+  
+  .userTable tbody td    /* Spacing and sizing for the table */
+  {
+    /*color:rgb(252, 0, 0); no just no, I can't read this color... stop readding it back please*/ 
+    text-align: left;
+  }
+  
+  
+  .userTable input[type = textbox], input[type = number] /* Spacing and sizing for the table */
+  {
+    font-size: large;
+    background-color: #c2c4b7;
+    border:0;
+    padding:10px; 
+    width: 100%;
+  }
+  
+  .button button /* css for button */
+  {
+    position: absolute;
+    top: 67vh;
+    right: 100px;
+    width: 110px;
+    height: 50px;
+    background-color: rgb(115, 212, 115);
+  }
+  
+  .ibutton button /* css for button */
+  {
+    position: absolute;
+    top: 83vh;
+    right: 100px;
+    width: 110px;
+    height: 30px;
+    background-color: rgb(115, 212, 115);
+  
+  }
+  
+  .ubutton button /* css for button */
+  {
+    position: absolute;
+    top: 87vh;
+    right: 100px;
+    width: 110px;
+    height: 30px;
+    background-color: rgb(115, 212, 115);
+  
+  }
+  
+  .ubutton input[type = "textbox"] /* css for button */
+  {
+    width: 150px;
+    position: absolute;
+    top: 87.3vh;
+    right: 22vh;
+    font-size: medium;
+    background-color: #c2c4b7;
+    border-style: dashed;
+  }
+  .ebutton button /* css for button */
+  {
+    position: absolute;
+    top: 75vh;
+    right: 100px;
+    width: 110px;
+    height: 50px;
+    background-color: rgb(115, 212, 115);
+  
+  }
+  .tooltip /* css for button tooltip when hovering */
+  {
+    position: relative;
+    display: inline-block;
+    border-bottom: 2px dotted purple;
+    bottom: 30vh;
+    left: 35%;
+  }
+  
+  .tooltip2 /* css for button tooltip when hovering */
+  {
+    position: relative;
+    display: inline-block;
+    border-bottom: 2px dotted purple;
+    bottom: 25vh;
+    left: 35%;
+  }
+  
+  .tooltip .tiptext /* css for button tooltip when hovering */
+  {
+    position: absolute;
+    z-index: 1;
+    top: -5px;
+    right: 105%;
+    visibility: hidden;
+    width: 100px;
+    background-color: #211d30;
+    color: white;
+    text-align: center;
+    border-radius: 15%;
+    padding: 3px;
+    
+  }
+  
+  .tooltip .tooltext /* css for button tooltip when hovering */
+  {
+    position: absolute;
+    z-index: 1;
+    top: -5px;
+    right: 105%;
+    visibility: hidden;
+    width: 200px;
+    background-color: #211d30;
+    color: white;
+    text-align: center;
+    border-radius: 15%;
+    padding: 3px;
+  }
+  
+  .tooltip:hover .tiptext /* css for button tooltip when hovering */
+  {
+    visibility: visible;
+  }
+  
+  .tooltip2 .tiptext2 /* css for button tooltip when hovering */
+  {
+    position: absolute;
+    z-index: 1;
+    top: -5px;
+    right: 105%;
+    visibility: hidden;
+    width: 100px;
+    background-color: #211d30;
+    color: white;
+    text-align: center;
+    border-radius: 15%;
+    padding: 3px;
+    
+  }
+  
+  .tooltip2 .tooltext2 /* css for button tooltip when hovering */
+  {
+    position: absolute;
+    z-index: 1;
+    top: -5px;
+    right: 105%;
+    visibility: hidden;
+    width: 200px;
+    background-color: #211d30;
+    color: white;
+    text-align: center;
+    border-radius: 15%;
+    padding: 3px;
+  }
+  
+  .tooltip2:hover .tiptext2 /* css for button tooltip when hovering */
+  {
+    visibility: visible;
+  }
+  
+  .totals /* css for the total html id */
+  {
+    position: absolute;
+    bottom: 30vh;
+    right: 76.5vh;
+    font-size:x-large;
+    font-family: sans-serif;
+    width: 100px;
+    height: 30px;
+  }
+  
+  .totals input[type = "number"] /* css for the total html id */
+  {
+    width: 200px;
+    position: absolute;
+    bottom: -.9vh;
+    left: 10vh;
+    font-size: x-large;
+    background-color: #c2c4b7;
+    border:0;
+  }

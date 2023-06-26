@@ -1,0 +1,208 @@
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="..\CSS\journal.css">
+    <!--Uses a site called bloxicons for a ton of free icons for web dev-->
+    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+     
+   </head>
+<body>
+  <div class="sidebar"> <!--I thought in my learning exp, you could name the class anything, and thats why it didnt work for hours because I named it navbar instead-->
+    <div class="FAKE-precisebook-logo">
+        <i class='bx bxs-book-open'></i>
+      <span class="logo_Title">Precise Books</span> <!--Sidebar link-->
+    </div>
+    <ul class="side_Links">
+      <li>
+        <a href="homepage.html">
+            <i class='bx bxs-dashboard' ></i>
+          <span class="link_Text">Dashboard</span> <!--Sidebar link-->
+        </a>
+      </li>
+      <li>
+        <a href="dashboard.html">
+          <i class='bx bxs-user-detail'></i>
+          <span class="link_Text">Admin</span> <!--Sidebar link-->
+        </a>
+      </li>
+      <li>
+        <a href="accountsboard.html">
+          <i class='bx bxs-door-open' ></i>
+          <span class="link_Text">Accounting</span> <!--Sidebar link-->
+        </a>
+      </li>
+      <li>
+        <a href = "journal.html">
+        <i class='bx bx-calculator' ></i>
+        <span class="link_Text">Journal</span> <!--Sidebar link-->
+      </li>
+      <li>
+        <a href="help.html">
+            <i class='bx bx-question-mark' ></i> <!--Logo picture-->
+          <span class="link_Text">FAQ</span> <!--Sidebar link-->
+        </a>
+      </li>
+      <li>
+        <a href="event log.html">
+          <i class='bx bx-clipboard'></i> <!--Logo picture-->
+          <span class="link_Text">Event Log</span> <!--Sidebar link-->
+        </a>
+      </li>
+      <li>
+        <a href="journalSearch.html">
+          <i class='bx bx-list-ul'></i> <!--Logo picture-->
+          <span class="link_Text">Journal View</span> <!--Sidebar link-->
+        </a>
+      </li>
+      <li>
+        <a href="ledger.html">
+            <i class='bx bx-spreadsheet' ></i> <!--Logo picture-->
+          <span class="link_Text">Ledger</span> <!--Sidebar link-->
+        </a>
+    </li>
+    <li>
+      <a href="accountSearch.html">
+        <i class='bx bx-credit-card-front'></i> <!--Logo picture-->
+        <span class="link_Text">Chart of Account View</span> <!--Sidebar link-->
+      </a>
+    </li>
+</ul>
+  </div>
+
+  <section class="pull_Out"> <!--Sidebar pull out-->
+    <div class="pull_Tab">
+      <i class='bx bx-arrow-from-left' ></i>
+      <span class="pull_Text"></span>
+    </div>
+  </section>
+
+  <div class = "userCirc"> <!--Username circle in the top right corner-->
+    <a href = "#">
+      <label for = username id = "username"> Username </label>
+      <i class='bx bx-user-circle' ></i>
+    </a>
+  </div>
+
+  <script>
+  let sidebar = document.querySelector(".sidebar");
+  let sidebarBtn = document.querySelector(".bx-arrow-from-left");
+  sidebarBtn.addEventListener("click", ()=>{
+    sidebar.classList.toggle("close");
+  });
+  
+  </script>
+
+<div class = accountText>
+  <p2>Type in an existing account number</p2>
+  <input type ="textbox" id = 'accNum' value = "" size = "10px">
+  <button id = "accbutt">Enter</button>
+</div>
+
+
+
+
+
+  <main>
+    <section class="table_header"></section>
+    <section class="table_body">
+      <table class="userTable" ><!--Uses a site called bloxicons for a ton of free icons for web dev-->
+        <thead>
+          <tr>
+            <th>Date</th>
+            <th>Description</th>
+            <th>Debits</th>
+            <th>Credits</th>
+          </tr>
+          
+        </thead>
+        <tbody id="tbody1"> <!--Table body items stored here-->
+
+          <tr>
+            <td> <input type = "textbox" id = "date" placeholder = "Date"/></td>
+            <td> <input type = "textbox" id = "Description" placeholder = "Description"/></td>
+            <td> <input type = "textbox" id = "debit" placeholder = "Debit" /></td>
+            <td> <input type = "textbox" id = "credit" placeholder = "Credit"/></td>
+          </tr>
+          <tr>
+            <td> <input type = "textbox" id = "date2" placeholder = "Date"/></td>
+            <td> <input type = "textbox" id = "Description2" placeholder = "Description"/></td>
+            <td> <input type = "number" id = "debit2" placeholder = "Debit"/></td>
+            <td> <input type = "number" id = "credit2" placeholder = "Credit"/></td>
+          </tr>
+          <tr>
+            <td> <input type = "textbox" id = "date3" placeholder = "Date"/></td>
+            <td> <input type = "textbox" id = "Description3" placeholder = "Description"/></td>
+            <td> <input type = "number" id = "debit3" placeholder = "Debit"/></td>
+            <td> <input type = "number" id = "credit3" placeholder = "Credit"/></td>
+          </tr>
+          <tr>
+            <td> <input type = "textbox" id = "date4" placeholder = "Date"/></td>
+            <td> <input type = "textbox" id = "Description4" placeholder = "Description"/></td>
+            <td> <input type = "number" id = "debit4" placeholder = "Debit"/></td>
+            <td> <input type = "number" id = "credit4" placeholder = "Credit"/></td>
+          </tr>
+          <tr>
+            <td> <input type = "textbox" id = "date4" placeholder = "Date"/></td>
+            <td> <input type = "textbox" id = "Description4" placeholder = "Description"/></td>
+            <td> <input type = "number" id = "debit4" placeholder = "Debit"/></td>
+            <td> <input type = "number" id = "credit4" placeholder = "Credit"/></td>
+          </tr>
+          <tr>
+            <td> <input type = "textbox" id = "date5" placeholder = "Date"/></td>
+            <td> <input type = "textbox" id = "Description5" placeholder = "Description"/></td>
+            <td> <input type = "number" id = "debit5" placeholder = "Debit"/></td>
+            <td> <input type = "number" id = "credit5" placeholder = "Credit"/></td>
+          </tr>
+            
+
+        </tbody>
+      </table>
+
+    </section>
+
+
+    <div class = "totals"> <!--Total balance shown here-->
+      <p2>Balance: </p2>
+      <input type = "number" id = "total" placeholder = "999"/>
+    </div>
+
+
+    <div class = "button">
+      <button id = "Submit" >Submit</button>  <!--The button that is connected to the update function in css and updates the actual table-->
+      <div class = "tooltip"> Submit Button Tip
+        <span class = "tiptext"> Submits this ledger for the designated account</span>
+      </div>
+    </div>
+<!-- called images here because that's what it used to be named by Roman -->
+    <div class = "ibutton">
+      <input id="fileInput" type="file">
+      <button id = "fileButton" >Select a file</button>  <!--The button that is connected to the update function in css and updates the actual table-->
+    </div>
+
+    <div class = "ubutton">
+      <button id = "upButton" >Upload a file</button>  <!--The button that is connected to the update function in css and updates the actual table-->
+      <input type = "textbox" id = "imageN" placeholder = "Name of File"/>
+    </div>
+
+    <div class = "ebutton">
+      <button id = "Clear" >Clear</button>  <!--The button that is connected to the update function in css and updates the actual table-->
+      <div class = "tooltip2"> Clear Button Tip
+        <span class = "tiptext2"> Clears all fields for the current ledger </span>
+      </div>
+    </div>
+
+
+
+</body>
+<!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-app.js"></script>
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+    https://firebase.google.com/docs/web/setup#available-libraries -->
+<script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-database.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-storage.js"></script>
+<!-- Our script must be loaded after firebase references -->
+<script src= "..\Javascript\journal.js">    </script>
+</html>
+ 

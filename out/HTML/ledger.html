@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>General Ledger</title>
+    <link rel="stylesheet" href="..\CSS\ledger.css">
+    <!--Uses a site called bloxicons for a ton of free icons for web dev-->
+    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+</head>
+
+<body>
+
+    <h1 class="header">General Ledger</h1>
+
+    <div class="sidebar">
+        <!--I thought in my learning exp, you could name the class anything, and thats why it didnt work for hours because I named it navbar instead-->
+        <div class="FAKE-precisebook-logo">
+            <i class='bx bxs-book-open'></i>
+            <span class="logo_Title">Precise Books</span> <!--Sidebar link-->
+        </div>
+        <ul class="side_Links">
+            <li>
+                <a href="homepage.html">
+                    <i class='bx bxs-dashboard'></i>
+                    <span class="link_Text">Dashboard</span> <!--Sidebar link--> 
+                </a>
+            </li>
+            <li>
+                <a href="dashboard.html">
+                    <i class='bx bxs-user-detail'></i>
+                    <span class="link_Text">Admin</span> <!--Sidebar link-->
+                </a>
+            </li>
+            <li>
+                <a href="accountsboard.html">
+                    <i class='bx bxs-door-open'></i>
+                    <span class="link_Text">Accounting</span> <!--Sidebar link-->
+                </a>
+            </li>
+            <li>
+                <a href = "journal.html">
+                <i class='bx bx-calculator' ></i>
+                <span class="link_Text">Journal</span> <!--Sidebar link-->
+              </li>
+            <li>
+                <a href="help.html">
+                    <i class='bx bx-question-mark'></i> <!--Logo picture-->
+                    <span class="link_Text">FAQ</span> <!--Sidebar link-->
+                </a>
+            </li>
+            <li>
+                <a href="event log.html">
+                    <i class='bx bx-clipboard'></i> <!--Logo picture-->
+                  <span class="link_Text">Event Log</span> <!--Sidebar link-->
+                </a>
+            </li>
+            <li>
+                <a href="journalSearch.html">
+                    <i class='bx bx-list-ul'></i> <!--Logo picture-->
+                  <span class="link_Text">Journal View</span> <!--Sidebar link-->
+                </a>
+            </li>
+            <li>
+                <a href="ledger.html">
+                    <i class='bx bx-spreadsheet' ></i> <!--Logo picture-->
+                  <span class="link_Text">Ledger</span> <!--Sidebar link-->
+                </a>
+            </li>
+            <li>
+                <a href="accountSearch.html">
+                  <i class='bx bx-credit-card-front'></i> <!--Logo picture-->
+                  <span class="link_Text">Chart of Account View</span> <!--Sidebar link-->
+                </a>
+              </li>
+        </ul>
+    </div>
+
+    <section class="pull_Out"> <!--Sidebar pull out-->
+        <div class="pull_Tab">
+            <i class='bx bx-arrow-from-left'></i>
+            <span class="pull_Text"></span>
+        </div>
+    </section>
+
+    <div class="userCirc"> <!--Username circle in the top right corner-->
+        <a href="#">
+            <label for=username id="username"> Username </label>
+            <i class='bx bx-user-circle'></i>
+        </a>
+    </div>
+
+    <script>
+        let sidebar = document.querySelector(".sidebar");
+        let sidebarBtn = document.querySelector(".bx-arrow-from-left");
+        sidebarBtn.addEventListener("click", () => {
+            sidebar.classList.toggle("close");
+        });
+
+    </script>
+
+   <!--- <iframe width="800" height="520" frameborder="0" scrolling="no" class="ledger"
+        src="https://kennesawedu-my.sharepoint.com/personal/dluong3_students_kennesaw_edu/_layouts/15/Doc.aspx?sourcedoc={865e2efa-4637-4ae9-a502-8361c595933d}&action=embedview&wdAllowInteractivity=False&AllowTyping=True&Item=Ledger.calc&wdHideGridlines=True&wdDownloadButton=True&wdInConfigurator=True&wdInConfigurator=True&edesNext=false&resen=true&ed1JS=false"></iframe>
+    excel stuff below
+    --> 
+    <iframe width="1000" height="600" frameborder="0" scrolling="no" class="ledger" src="https://docs.google.com/spreadsheets/d/11hSjfq7vT6GsIhA38o_KcJeKJCylID93ee-29OiGxUc/edit?usp=sharingwidget=true&amp;headers=false"></iframe>
+</body>
+
+</html>

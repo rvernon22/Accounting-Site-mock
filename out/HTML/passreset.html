@@ -1,0 +1,48 @@
+<html>
+<head>
+    <title>Password Reset </title>
+    <link rel = "stylesheet" href="\CSS\passreset.css">
+    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+</head>
+
+    <body>
+        <div class="FAKE-precisebook-logo"> <!-- Logo Div container-->
+            <i class='bx bxs-book-open'></i>
+               <span class="logo_Title">Precise Books</span>
+       </div>
+
+        <div id = "Reset">
+        <div class = "Center">
+        <h2> Type in to Reset</h2>
+        <input type = "text" id = "email" name = "email" autocomplete = "email" placeholder = "email"/>
+        <input type = "text" id = "username" name = "username" autocomplete = "username" placeholder = "username"/>
+        <label for = "q1"> First school?</label>
+        <input type = "text" id = "q1" name = "q1" autocomplete = "q1" placeholder = "answer"/><br>
+        <label for = "q2"> First car?</label>
+        <input type = "text" id = "q2" name = "q2" autocomplete = "q2" placeholder = "answer"/><br>
+
+
+
+        <div id = "button">
+            <button onclick = "reset()"> Submit</button>
+        </div>
+
+        <a href= "loginpage.html" id = "signup_Page"> Want to sign in?</a>
+        </div>
+
+        </div>
+
+</body>
+<!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-app.js"></script>
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+<script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-database.js"></script>
+
+<!-- Our script must be loaded after firebase references -->
+<script src="..\Javascript\passreset.js"></script>
+
+
+</html>

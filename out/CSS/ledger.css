@@ -1,0 +1,220 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  body /* css for body text*/
+  {
+    background: #c2c4b7;
+  }
+  
+  .userCirc a /* css for user circle pic*/
+  {
+    position: absolute;
+    top: 2%;
+    left: 93%;
+    text-decoration: none;
+  
+  }
+  .userCirc label /* css for user circle pic*/
+  {
+      font-size: 20px;
+  }
+  
+  .userCirc i /* css for user circle pic*/
+  {
+      font-size: 35px;
+  }
+  
+  .sidebar /* css for sidebar*/
+  {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 260px;
+    background: #211d30;
+    z-index: 100;
+    transition: all 0.5s ease;
+  }
+  
+  .sidebar.close /* css for sidebar*/
+  {
+    width: 78px;
+  }
+  
+  .sidebar .FAKE-precisebook-logo /* css for sidebar*/
+  {
+    height: 60px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+  }
+  
+  .sidebar .FAKE-precisebook-logo i /* css for sidebar*/
+  {
+    font-size: 30px;
+    color: white;
+    height: 50px;
+    min-width: 78px;
+    text-align: center;
+    line-height: 50px;
+  }
+  
+  .sidebar .FAKE-precisebook-logo .logo_Title /* css for sidebar*/
+  {
+    font-size: 22px;
+    color: white;
+    font-weight: 600;
+    transition: 0.3s ease;
+    transition-delay: 0.1s;
+  }
+  
+  .sidebar.close .FAKE-precisebook-logo .logo_Title /* css for sidebar*/
+  {
+    transition-delay: 0s;
+    opacity: 0;
+    pointer-events: none;
+  }
+  
+  .sidebar .side_Links /* css for sidebar*/
+  {
+    height: 100%;
+    padding: 30px 0 150px 0;
+    overflow: auto;
+  }
+  
+  .sidebar.close .side_Links /* css for sidebar*/
+  {
+    overflow: visible;
+  }
+  
+  .sidebar .side_Links li /* css for sidebar*/
+  {
+    position: relative;
+    list-style: none;
+    transition: all 0.4s ease;
+  }
+  
+  .sidebar .side_Links li:hover /* css for sidebar*/
+  {
+    background: #4c4877;
+    border-radius: 25px;
+  }
+  
+  .sidebar .side_Links li i /* css for sidebar*/
+  {
+    height: 50px;
+    min-width: 78px;
+    text-align: center;
+    line-height: 50px;
+    color: white;
+    font-size: 30px;
+    cursor: pointer;
+    transition: all 0.5s ease;
+  }
+  
+  .sidebar .side_Links li a /* css for sidebar*/
+  {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+  }
+  
+  .sidebar .side_Links li a .link_Text /* css for sidebar*/
+  {
+    font-size: 18px;
+    font-weight: 400;
+    color: #fff;
+    transition: all 0.4s ease;
+  }
+  
+  .sidebar.close .side_Links li a .link_Text /* css for sidebar*/
+  {
+    opacity: 0;
+    pointer-events: none;
+  }
+  
+  .pull_Out /* css for sidebar*/
+  {
+    position: relative;
+    height: 100vh;
+    left: 260px;
+    width: calc(100% - 260px);
+    transition: all 0.5s ease;
+  }
+  
+  .sidebar.close ~ .pull_Out /* css for sidebar*/
+  {
+    left: 78px;
+    width: calc(100% - 78px);
+  }
+  
+  .pull_Out .pull_Tab
+  { /* css for sidebar*/
+    height: 60px;
+    display: flex;
+    align-items: center;
+  }
+  
+  .pull_Out .pull_Tab i:hover /* css for sidebar*/
+  {
+    border-radius: 100px;
+    background: #85867e;
+  }
+  
+  .pull_Out .pull_Tab .bx-arrow-from-left, /* css for sidebar*/
+  .pull_Out .pull_Tab .pull_Text
+  {
+    color: #11101d;
+    font-size: 30px;
+  }
+  
+  .pull_Out .pull_Tab .bx-arrow-from-left /* css for sidebar*/
+  {
+    margin: 0 15px;
+    cursor: pointer;
+  }
+  
+  .pull_Out .pull_Tab .pull_Text /* css for sidebar*/
+  {
+    font-size: 26px;
+    font-weight: 600;
+  }
+  
+  @media (max-width: 400px) 
+  {
+    .sidebar.close ~ .pull_Out{ /* css for sidebar*/
+      width: 100%;
+      left: 0;
+    }
+    .sidebar.close{
+      width: 0;
+    }
+    .sidebar{
+      width: 78px;
+    }
+    .pull_Out{
+      left: 78px;
+      width: calc(100% - 78px);
+      z-index: 100;
+    }
+    
+  }
+
+  .header{ /* css for header aka title*/
+    position:absolute;
+    top:8%;
+    left:21%;
+  }
+
+  .ledger{ /* css for ledger container*/
+    position:absolute;
+    top:17%;
+    left:20%;
+  }
+
+  .alert { /*Make all alerts red and bold*/
+    color: red;
+    font-weight: bold;
+  }

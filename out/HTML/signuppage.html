@@ -1,0 +1,67 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name = "viewport" content = "width=device-width, initial-scale = 1.0"> <!-- Viewing html code-->
+    <title>Sign up Page</title>
+    <link rel = "stylesheet" href="\CSS\projectCSS.css"> <!-- Calls css-->
+    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+</head>
+
+    <body>
+
+        <div class="FAKE-precisebook-logo">
+            <i class='bx bxs-book-open'></i>
+               <span class="logo_Title">Precise Books</span>
+
+<div id = "Login">
+    <div class = "Center">
+        <h2> Sign up here</h2>
+        <input type = "text" id = "email" name = "email" placeholder = "email"/>
+        <input type = "password" id = "password" name = "password" autocomplete ="new-password" placeholder = "password" >
+        
+        <label id = "toggleCheckbox">
+            <input type="checkbox" onclick="passwordToggle()">Show Password</input>
+        </label>
+        
+        <input type = "text" id = "fname" name = "fname" placeholder = "First Name">
+        <input type = "text" id = "lname" name = "lname" placeholder = "Last Name">
+        <input type = "text" id = "address" name = "address" placeholder = "Address">
+        
+        <label for = "q1"> First school?</label>
+        <input type = "text" id = "q1" name = "q1" autocomplete = "q1" placeholder = "answer"/><br>
+        <label for = "q2"> First car?</label>
+        <input type = "text" id = "q2" name = "q2" autocomplete = "q2" placeholder = "answer"/><br>
+
+        <label for = "date" id = "DateBirth" >Date of Birth </label>
+        <input type = "date" id = "DOB" name = "DOB" value ="" min = "1900-01-01" max = "2022-12-12">
+
+        <label for = "user" id = "user" >User Type </label>
+        <select name = user id = "user_Type">
+            <option value = "Admin"> Admin </option> 
+            <option value = "Manager"> Mangager</option>
+            <option value = "User"> User</option>
+        </select>
+
+        <!--<input type = "submit" id = "register" name = "register" value = "Register"> -->
+        <div id = "button">
+            <button onclick = "register()"> Sign up</button>
+        </div>
+        <a href= "/HTML/loginpage.html" id = "login_page"> Already have an account? </a>
+        
+    </div>
+
+</div>
+
+
+    </body>
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-app.js"></script>
+
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+        https://firebase.google.com/docs/web/setup#available-libraries -->
+    <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-database.js"></script>
+
+    <!-- Our script must be loaded after firebase references -->
+    <script src="..\Javascript\signup.js"></script>
+</html> 

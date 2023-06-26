@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Precise Books Search</title>
+
+    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="..\CSS\searchpage.css"> <!--Calls css-->
+</head>
+<body>
+    <div class="sidebar"> <!--I thought in my learning exp, you could name the class anything, and thats why it didnt work for hours because I named it navbar instead-->
+        <div class="FAKE-precisebook-logo">
+            <i class='bx bxs-book-open'></i> <!--Logo picture-->
+          <span class="logo_Title">Precise Books</span> <!--Company name using inline element span to stay on same line-->
+        </div>
+        <ul class="side_Links"> <!-- Links on side of the sidebar to move through future pages-->
+          <li>
+            <a href="homepage.html">
+                <i class='bx bxs-dashboard' ></i>
+              <span class="link_Text">Dashboard</span>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <i class='bx bxs-door-open' ></i>
+              <span class="link_Text">Setting</span>
+            </a>
+          </li>
+          <li>
+            <a href="accountsboard.html">
+              <i class='bx bxs-door-open' ></i>
+              <span class="link_Text">Accounting</span>
+            </a>
+          </li>
+          <li>
+            <a href="help.html">
+                <i class='bx bx-question-mark' ></i> <!--Logo picture-->
+              <span class="link_Text">FAQ</span> <!--Dashboard link-->
+            </a>
+          </li>
+          <li>
+            <a href = "dashboard.html"> <!--to do add a verifier function to javascript to only allow admins-->
+              <i class='bx bxs-user-account'></i> <!--logo pic-->
+              <span class="link_Text">Admin Dashboard</span> <!--Dashboard link-->
+            </a>
+          </li>
+        </ul>
+      </div>
+    
+      <section class="pull_Out">
+        <div class="pull_Tab">
+          <i class='bx bx-arrow-from-left' onclick="sidebarToggle()"></i> <!--Slide menu icon -->
+          <span class="pull_Text"></span> <!--Text name-->
+        </div>
+      </section>
+       
+    
+      <div class = "userCirc"> 
+        <a href = "#">
+          <label for = username id = "username"> Username </label> <!-- Username text on right hand side-->
+          <i class='bx bx-user-circle' ></i> <!--Logo picture-->
+        </a>
+      </div>
+    
+    <script>
+  let sidebar = document.querySelector(".sidebar"); <!--Allows the side bar to move back and forth with javascript-->
+  let sidebarBtn = document.querySelector(".bx-arrow-from-left");
+  sidebarBtn.addEventListener("click", ()=>{
+    sidebar.classList.toggle("close");
+  });
+  
+  </script>
+
+<main>
+  <div class="input_group">
+  <input type="text" class="search_bar" placeholder="Account Number">
+    <button class="search_button" type="button" onclick="search()">Search</button>
+  </div>
+    <section class="table__header"></section>
+    <section class="table__body">
+      <table class="accountTable">
+        <thead>
+          <tr>
+            <th>Account</th>
+            <th>Description</th>
+            <th>Subcategory</th>
+            <th>Initial B</th>
+            <th>Debit</th>
+            <th>Credit</th>
+            <th>Balance</th>
+            <th>Time</th>
+            <th>User ID</th>
+            <th>Order</th>
+            <th>RE</th>
+            <th>Comment</th>
+          </tr>
+        </thead>
+        <tbody id="tbody1">
+          
+        </tbody>
+      </table>
+    
+</body>
+
+<script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-database.js"></script>
+<script src = "..\Javascript\searchpage.js"></script> <!-- calls scripts-->
+</html>

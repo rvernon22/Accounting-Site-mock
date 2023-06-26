@@ -1,0 +1,330 @@
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="..\CSS\editdash.css">
+    <!--Uses a site called bloxicons for a ton of free icons for web dev-->
+    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+     
+   </head>
+<body>
+  <div class="sidebar"> <!--I thought in my learning exp, you could name the class anything, and thats why it didnt work for hours because I named it navbar instead-->
+    <div class="FAKE-precisebook-logo">
+        <i class='bx bxs-book-open'></i>
+      <span class="logo_Title">Precise Books</span> <!--Sidebar link-->
+    </div>
+    <ul class="side_Links">
+      <li>
+        <a href="homepage.html">
+            <i class='bx bxs-dashboard' ></i>
+          <span class="link_Text">Dashboard</span> <!--Sidebar link-->
+        </a>
+      </li>
+      <li>
+        <a href="dashboard.html">
+          <i class='bx bxs-user-detail'></i>
+          <span class="link_Text">Admin</span> <!--Sidebar link-->
+        </a>
+      </li>
+      <li>
+        <a href="accountsboard.html">
+          <i class='bx bxs-door-open' ></i>
+          <span class="link_Text">Accounting</span> <!--Sidebar link-->
+        </a>
+      </li>
+      <li>
+        <a href="help.html">
+            <i class='bx bx-question-mark' ></i> <!--Logo picture-->
+          <span class="link_Text">FAQ</span> <!--Sidebar link-->
+        </a>
+      </li>
+      <li>
+        <a href="event log.html">
+          <i class='bx bx-clipboard'></i> <!--Logo picture-->
+          <span class="link_Text">Event Log</span> <!--Sidebar link-->
+        </a>
+      </li>
+      <li>
+        <a href="journalSearch.html">
+            <i class='bx bx-list-ul'></i> <!--Logo picture-->
+          <span class="link_Text">Journal View</span> <!--Sidebar link-->
+        </a>
+      </li>
+      <li>
+        <a href="ledger.html">
+            <i class='bx bx-spreadsheet' ></i> <!--Logo picture-->
+          <span class="link_Text">Ledger</span> <!--Sidebar link-->
+        </a>
+      </li>
+      <li>
+        <a href="accountSearch.html">
+          <i class='bx bx-credit-card-front'></i> <!--Logo picture-->
+          <span class="link_Text">Chart of Account View</span> <!--Sidebar link-->
+        </a>
+      </li>
+</ul>
+  </div>
+
+  <section class="pull_Out"> <!--Sidebar pull out-->
+    <div class="pull_Tab">
+      <i class='bx bx-arrow-from-left' ></i>
+      <span class="pull_Text"></span>
+    </div>
+  </section>
+
+  <div class = "userCirc"> <!--Username circle in the top right corner-->
+    <a href = "#">
+      <label for = username id = "username"> Username </label>
+      <i class='bx bx-user-circle' ></i>
+    </a>
+  </div>
+
+  <script>
+  let sidebar = document.querySelector(".sidebar");
+  let sidebarBtn = document.querySelector(".bx-arrow-from-left");
+  sidebarBtn.addEventListener("click", ()=>{
+    sidebar.classList.toggle("close");
+  });
+  var validate = function(e)  //function that only allows two decimal spaces 
+  {
+    var t = e.value;
+    e.value = (t.indexOf(".") >= 0) ? (t.substr(0, t.indexOf(".")) + t.substr(t.indexOf("."), 3)) : t; 
+  }
+
+  var accvalidate = function(e)  //function doesnt allow accnum to have decimals
+  {
+    var t = e.value;
+    e.value = (t.indexOf(".") >= 0) ? (t.substr(0, t.indexOf(".")) + t.substr(t.indexOf("."), 0)) : t; 
+  }
+
+
+  </script>
+
+<div class = timeClock>
+  <input type = "date" id = "currDate" name = "calender" value = "2023-03-18" >
+  <h1 id = "time"></h1>
+
+  <script>
+    let time = document.getElementById("time");
+
+    setInterval(() => {
+      let date = new Date();
+      time.innerHTML = date.toLocaleTimeString();
+    }, 1);
+  
+   // document.getElementById('currDate').value = new Date().toDateInputValue();
+  </script>
+</div>
+
+  <main>
+    <section class="table__header"></section>
+    <section class="table__body">
+      <table class="userTable">
+        <thead> <!--Table headers-->
+          <tr>
+            <th>Account</th>
+            <th>Description</th>
+            <th>Subcategory</th>
+            <th>Initial B</th>
+            <th>Debit</th>
+            <th>Credit</th>
+            <th>Balance</th>
+            <th>Time</th>
+            <th>User ID</th>
+            <th>Order</th>
+            <th>RE</th>
+            <th>Comment</th>
+          </tr>
+        </thead>
+        <tbody id="tbody1">
+          
+        </tbody>
+      </table>
+
+    </section>
+   <div id =  "AccDesc">    <!--a div for a large table housing 10 rows of accounting info and data-->
+        <div class = "Info">
+            <table class = "AccDescTable">
+                <tr>
+                  <td><input type = "number" id = "accNum" name = "accNum" placeholder = "Acc Number"oninput="accvalidate(this)"/></td>
+                  <td><input type = "text" id = "desc" name = "desc" placeholder = "Description"oninput="validate(this)"/></td>
+                  <td><input type = "text" id = "Subcategory" name = "Subcategory" placeholder = "Subcategory"oninput="validate(this)"/></td>
+                  <td><input type = "text" id = "Initial" name = "Initial" placeholder = "Initial"oninput="validate(this)"/></td>  
+                  <td><input type = "text" id = "Debit" name = "Debit" placeholder = "Debit" oninput="validate(this)"/></td>
+                  <td><input type = "text" id = "Credit" name = "Credit" placeholder = "Credit"oninput="validate(this)"/></td>
+                  <td><input type = "text" id = "Balance" name = "Balance" placeholder = "Balance"oninput="validate(this)"/></td>
+                  <td><input type = "text" id = "Time" name = "Time" placeholder = "Time"oninput="validate(this)"/></td>
+                  <td><input type = "text" id = "user_ID" name = "user_ID" placeholder = "user_ID"oninput="validate(this)"/></td>
+                  <td><input type = "text" id = "Order" name = "Order" placeholder = "Order"oninput="validate(this)"/></td>
+                  <td><input type = "text" id = "RE" name = "RE" placeholder = "RE"oninput="validate(this)"/></td>
+                  <td><input type = "text" id = "Comment1" name = "Comment" placeholder = "Comment"oninput="validate(this)"/></td>
+
+                  </tr>
+                  <td><input type = "hidden" id = "temp" name = "temp2" placeholder = "temp"oninput="validate(this)"/></td> 
+                  <td><input type = "text" id = "desc2" name = "desc2" placeholder = "Description"oninput="validate(this)"/></td>
+                  <td><input type = "text" id = "Subcategory2" name = "Subcategory2" placeholder = "Subcategory"oninput="validate(this)"/></td>
+                  <td><input type = "text" id = "Initial2" name = "Initial2" placeholder = "Initial"oninput="validate(this)"/></td>  
+                  <td><input type = "text" id = "Debit2" name = "Debit2" placeholder = "Debit"oninput="validate(this)"/></td>
+                  <td><input type = "text" id = "Credit2" name = "Credit2" placeholder = "Credit"oninput="validate(this)"/></td>
+                  <td><input type = "text" id = "Balance2" name = "Balance2" placeholder = "Balance"oninput="validate(this)"/></td>
+                  <td><input type = "text" id = "Time2" name = "Time2" placeholder = "Time"oninput="validate(this)"/></td>
+                  <td><input type = "text" id = "user_ID2" name = "user_ID2" placeholder = "user_ID"oninput="validate(this)"/></td>
+                  <td><input type = "text" id = "Order2" name = "Order2" placeholder = "Order"oninput="validate(this)"/></td>
+                  <td><input type = "text" id = "RE2" name = "RE2" placeholder = "RE"oninput="validate(this)"/></td>
+                  <td><input type = "text" id = "Comment2" name = "Comment2" placeholder = "Comment"oninput="validate(this)"/></td>
+
+                  </tr>
+                  <td><input type = "hidden" id = "temp" name = "temp3" placeholder = "temp"oninput="validate(this)"/></td> 
+                  <td><input type = "text" id = "desc3" name = "desc3" placeholder = "Description"oninput="validate(this)"/></td>
+                  <td><input type = "text" id = "Subcategory3" name = "Subcategory3" placeholder = "Subcategory"oninput="validate(this)"/></td>
+                  <td><input type = "text" id = "Initial3" name = "Initial3" placeholder = "Initial"oninput="validate(this)"/></td>  
+                  <td><input type = "text" id = "Debit3" name = "Debit3" placeholder = "Debit"oninput="validate(this)"/></td>
+                  <td><input type = "text" id = "Credit3" name = "Credit3" placeholder = "Credit"oninput="validate(this)"/></td>
+                  <td><input type = "text" id = "Balance3" name = "Balance3" placeholder = "Balance"oninput="validate(this)"/></td>
+                  <td><input type = "text" id = "Time3" name = "Time3" placeholder = "Time"oninput="validate(this)"/></td>
+                  <td><input type = "text" id = "user_ID3" name = "user_ID3" placeholder = "user_ID"oninput="validate(this)"/></td>
+                  <td><input type = "text" id = "Order3" name = "Order3" placeholder = "Order"oninput="validate(this)"/></td>
+                  <td><input type = "text" id = "RE3" name = "RE3" placeholder = "RE"oninput="validate(this)"/></td>
+                  <td><input type = "text" id = "Comment3" name = "Comment3" placeholder = "Comment"oninput="validate(this)"/></td>
+
+                  </tr>
+                  <td><input type = "hidden" id = "temp" name = "temp4" placeholder = "temp"oninput="validate(this)"/></td> 
+                  <td><input type = "text" id = "desc4" name = "desc4" placeholder = "Description"oninput="validate(this)"/></td>
+                  <td><input type = "text" id = "Subcategory4" name = "Subcategory4" placeholder = "Subcategory"oninput="validate(this)"/></td>
+                  <td><input type = "text" id = "Initial4" name = "Initial4" placeholder = "Initial"oninput="validate(this)"/></td>  
+                  <td><input type = "text" id = "Debit4" name = "Debit4" placeholder = "Debit"oninput="validate(this)"/></td>
+                  <td><input type = "text" id = "Credit4" name = "Credit4" placeholder = "Credit"oninput="validate(this)"/></td>
+                  <td><input type = "text" id = "Balance4" name = "Balance4" placeholder = "Balance"oninput="validate(this)"/></td>
+                  <td><input type = "text" id = "Time4" name = "Time4" placeholder = "Time"oninput="validate(this)"/></td>
+                  <td><input type = "text" id = "user_ID4" name = "user_ID4" placeholder = "user_ID"oninput="validate(this)"/></td>
+                  <td><input type = "text" id = "Order4" name = "Order4" placeholder = "Order"oninput="validate(this)"/></td>
+                  <td><input type = "text" id = "RE4" name = "RE4" placeholder = "RE"oninput="validate(this)"/></td>
+                  <td><input type = "text" id = "Comment4" name = "Comment4" placeholder = "Comment"oninput="validate(this)"/></td>
+                  </tr>
+                  
+                  <td><input type = "hidden" id = "temp5" name = "temp5" placeholder = "temp"oninput="validate(this)"/></td> 
+                  <td><input type = "text" id = "desc5" name = "desc5" placeholder = "Description"oninput="validate(this)"/></td>
+                  <td><input type = "text" id = "Subcategory5" name = "Subcategory5" placeholder = "Subcategory"oninput="validate(this)"/></td>
+                  <td><input type = "text" id = "Initial5" name = "Initial5" placeholder = "Initial"oninput="validate(this)"/></td>  
+                  <td><input type = "text" id = "Debit5" name = "Debit5" placeholder = "Debit"oninput="validate(this)"/></td>
+                  <td><input type = "text" id = "Credit5" name = "Credit5" placeholder = "Credit"oninput="validate(this)"/></td>
+                  <td><input type = "text" id = "Balance5" name = "Balance5" placeholder = "Balance"oninput="validate(this)"/></td>
+                  <td><input type = "text" id = "Time5" name = "Time5" placeholder = "Time"oninput="validate(this)"/></td>
+                  <td><input type = "text" id = "user_ID5" name = "user_ID5" placeholder = "user_ID"oninput="validate(this)"/></td>
+                  <td><input type = "text" id = "Order5" name = "Order5" placeholder = "Order"oninput="validate(this)"/></td>
+                  <td><input type = "text" id = "RE5" name = "RE5" placeholder = "RE"oninput="validate(this)"/></td>
+                  <td><input type = "text" id = "Comment5" name = "Comment5" placeholder = "Comment"oninput="validate(this)"/></td>
+                  </tr>
+
+                  <td><input type = "hidden" id = "temp6" name = "temp6" placeholder = "temp"oninput="validate(this)"/></td> 
+                  <td><input type = "text" id = "desc6" name = "desc6" placeholder = "Description"oninput="validate(this)"/></td>
+                  <td><input type = "text" id = "Subcategory6" name = "Subcategory6" placeholder = "Subcategory"oninput="validate(this)"/></td>
+                  <td><input type = "text" id = "Initial6" name = "Initial6" placeholder = "Initial"oninput="validate(this)"/></td>  
+                  <td><input type = "text" id = "Debit6" name = "Debit6" placeholder = "Debit"oninput="validate(this)"/></td>
+                  <td><input type = "text" id = "Credit6" name = "Credit6" placeholder = "Credit"oninput="validate(this)"/></td>
+                  <td><input type = "text" id = "Balance6" name = "Balance6" placeholder = "Balance"oninput="validate(this)"/></td>
+                  <td><input type = "text" id = "Time6" name = "Time6" placeholder = "Time"oninput="validate(this)"/></td>
+                  <td><input type = "text" id = "user_ID6" name = "user_ID6" placeholder = "user_ID"oninput="validate(this)"/></td>
+                  <td><input type = "text" id = "Order6" name = "Order6" placeholder = "Order"oninput="validate(this)"/></td>
+                  <td><input type = "text" id = "RE6" name = "RE6" placeholder = "RE"oninput="validate(this)"/></td>
+                  <td><input type = "text" id = "Comment6" name = "Comment6" placeholder = "Comment"oninput="validate(this)"/></td>
+                  </tr>
+                  
+                  <td><input type = "hidden" id = "temp" name = "temp7" placeholder = "temp"oninput="validate(this)"/></td> 
+                  <td><input type = "text" id = "desc7" name = "desc7" placeholder = "Description"oninput="validate(this)"/></td>
+                  <td><input type = "text" id = "Subcategory7" name = "Subcategory7" placeholder = "Subcategory"oninput="validate(this)"/></td>
+                  <td><input type = "text" id = "Initial7" name = "Initial7" placeholder = "Initial"oninput="validate(this)"/></td>  
+                  <td><input type = "text" id = "Debit7" name = "Debit7" placeholder = "Debit"oninput="validate(this)"/></td>
+                  <td><input type = "text" id = "Credit7" name = "Credit7" placeholder = "Credit"oninput="validate(this)"/></td>
+                  <td><input type = "text" id = "Balance7" name = "Balance7" placeholder = "Balance"oninput="validate(this)"/></td>
+                  <td><input type = "text" id = "Time7" name = "Time7" placeholder = "Time"oninput="validate(this)"/></td>
+                  <td><input type = "text" id = "user_ID7" name = "user_ID7" placeholder = "user_ID"oninput="validate(this)"/></td>
+                  <td><input type = "text" id = "Order7" name = "Order7" placeholder = "Order"oninput="validate(this)"/></td>
+                  <td><input type = "text" id = "RE7" name = "RE7" placeholder = "RE"oninput="validate(this)"/></td>
+                  <td><input type = "text" id = "Comment7" name = "Comment7" placeholder = "Comment"oninput="validate(this)"/></td>
+                  </tr>
+
+                  <td><input type = "hidden" id = "temp" name = "temp8" placeholder = "temp"oninput="validate(this)"/></td> 
+                  <td><input type = "text" id = "desc8" name = "desc8" placeholder = "Description"oninput="validate(this)"/></td>
+                  <td><input type = "text" id = "Subcategory8" name = "Subcategory8" placeholder = "Subcategory"oninput="validate(this)"/></td>
+                  <td><input type = "text" id = "Initial8" name = "Initial8" placeholder = "Initial"oninput="validate(this)"/></td>  
+                  <td><input type = "text" id = "Debit8" name = "Debit8" placeholder = "Debit"oninput="validate(this)"/></td>
+                  <td><input type = "text" id = "Credit8" name = "Credit8" placeholder = "Credit"oninput="validate(this)"/></td>
+                  <td><input type = "text" id = "Balance8" name = "Balance8" placeholder = "Balance"oninput="validate(this)"/></td>
+                  <td><input type = "text" id = "Time8" name = "Time8" placeholder = "Time"oninput="validate(this)"/></td>
+                  <td><input type = "text" id = "user_ID8" name = "user_ID8" placeholder = "user_ID"oninput="validate(this)"/></td>
+                  <td><input type = "text" id = "Order8" name = "Order8" placeholder = "Order"oninput="validate(this)"/></td>
+                  <td><input type = "text" id = "RE8" name = "RE8" placeholder = "RE"oninput="validate(this)"/></td>
+                  <td><input type = "text" id = "Comment8" name = "Comment8" placeholder = "Comment"oninput="validate(this)"/></td>
+                  </tr>
+
+                  <td><input type = "hidden" id = "temp" name = "temp9" placeholder = "temp"oninput="validate(this)"/></td> 
+                  <td><input type = "text" id = "desc9" name = "desc9" placeholder = "Description"oninput="validate(this)"/></td>
+                  <td><input type = "text" id = "Subcategory9" name = "Subcategory9" placeholder = "Subcategory"oninput="validate(this)"/></td>
+                  <td><input type = "text" id = "Initial9" name = "Initial9" placeholder = "Initial"oninput="validate(this)"/></td>  
+                  <td><input type = "text" id = "Debit9" name = "Debit9" placeholder = "Debit"oninput="validate(this)"/></td>
+                  <td><input type = "text" id = "Credit9" name = "Credit9" placeholder = "Credit"oninput="validate(this)"/></td>
+                  <td><input type = "text" id = "Balance9" name = "Balance9" placeholder = "Balance"oninput="validate(this)"/></td>
+                  <td><input type = "text" id = "Time9" name = "Time9" placeholder = "Time"oninput="validate(this)"/></td>
+                  <td><input type = "text" id = "user_ID9" name = "user_ID9" placeholder = "user_ID"oninput="validate(this)"/></td>
+                  <td><input type = "text" id = "Order9" name = "Order9" placeholder = "Order"oninput="validate(this)"/></td>
+                  <td><input type = "text" id = "RE9" name = "RE9" placeholder = "RE"oninput="validate(this)"/></td>
+                  <td><input type = "text" id = "Comment9" name = "Comment9" placeholder = "Comment"oninput="validate(this)"/></td>
+                  </tr>
+
+                  <td><input type = "hidden" id = "temp" name = "temp0" placeholder = "temp"oninput="validate(this)"/></td> 
+                  <td><input type = "text" id = "desc10" name = "desc0" placeholder = "Description"oninput="validate(this)"/></td>
+                  <td><input type = "text" id = "Subcategory10" name = "Subcategory0" placeholder = "Subcategory"oninput="validate(this)"/></td>
+                  <td><input type = "text" id = "Initial10" name = "Initial0" placeholder = "Initial"oninput="validate(this)"/></td>  
+                  <td><input type = "text" id = "Debit10" name = "Debit0" placeholder = "Debit"oninput="validate(this)"/></td>
+                  <td><input type = "text" id = "Credit10" name = "Credit0" placeholder = "Credit"oninput="validate(this)"/></td>
+                  <td><input type = "text" id = "Balance10" name = "Balance0" placeholder = "Balance"oninput="validate(this)"/></td>
+                  <td><input type = "text" id = "Time10" name = "Time0" placeholder = "Time"oninput="validate(this)"/></td>
+                  <td><input type = "text" id = "user_ID10" name = "user_ID0" placeholder = "user_ID"oninput="validate(this)"/></td>
+                  <td><input type = "text" id = "Order10" name = "Order0" placeholder = "Order"oninput="validate(this)"/></td>
+                  <td><input type = "text" id = "RE10" name = "RE0" placeholder = "RE"oninput="validate(this)"/></td>
+                  <td><input type = "text" id = "Comment10" name = "Comment0" placeholder = "Comment"oninput="validate(this)"/></td>
+                  </tr>
+
+
+                </tr>
+            </table>
+            
+        </div>
+    </div>
+    </main>
+
+    <div class = "button">
+    <button id = "Update" >Update</button>  <!--The button that is connected to the update function in css and updates the actual table-->
+    <div class = "tooltip"> Update Button Tip
+      <span class = "tiptext"> Submits all fields to edit an existing account</span>
+    </div>
+  </div>
+
+    <div class = "ebutton">   <!--button link to the create account page-->
+      <a href = "accountsboard.html">
+      <button id = "Create">Create</button>
+      </a>
+      <div class = "tooltip2"> Create Button Tip
+        <span class = "tiptext2"> Brings you to a page to create a new acccount</span>
+      </div>
+    </div>
+
+    <div class = "hbutton">   <!--Link button leading to edit page-->
+      <a href = "help.html">  
+      <button id = "help">Help!</button>
+      </a>
+    </div>
+
+</body>
+<!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-app.js"></script>
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+    https://firebase.google.com/docs/web/setup#available-libraries -->
+<script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-database.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-storage.js"></script>
+<!-- Our script must be loaded after firebase references -->
+<script src= "..\Javascript\editdash.js">    </script>
+</html>
+ 
