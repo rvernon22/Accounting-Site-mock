@@ -1,0 +1,189 @@
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="journal.css">
+    <!--Uses a site called bloxicons for a ton of free icons for web dev-->
+    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+     
+   </head>
+<body>
+  <div class="sidebar"> <!--I thought in my learning exp, you could name the class anything, and thats why it didnt work for hours because I named it navbar instead-->
+    <div class="FAKE-precisebook-logo">
+        <i class='bx bxs-book-open'></i>
+      <span class="logo_Title">Precise Books</span>
+    </div>
+    <ul class="side_Links">
+      <li>
+        <a href="#">  <!--side bar links and images-->
+            <i class='bx bxs-dashboard' ></i>
+          <span class="link_Text">Dashboard</span>
+        </a>
+      </li>
+      <li>
+        <a href="#">
+          <i class='bx bxs-door-open' ></i>
+          <span class="link_Text">Setting</span>
+        </a>
+      </li>
+      <li>
+        <a href="accountsboard.html">
+          <i class='bx bxs-door-open' ></i>
+          <span class="link_Text">Accounts</span>
+        </a>
+      </li>
+      <li>
+        <a href="journal.html">
+          <i class='bx bxs-dashboard' ></i>
+          <span class="link_Text">Journal</span>
+        </a>
+      </li>
+  </li>
+</ul>
+  </div>
+
+  <section class="pull_Out">
+    <div class="pull_Tab">
+      <i class='bx bx-arrow-from-left' ></i>
+      <span class="pull_Text"></span>
+    </div>
+  </section>
+
+  <div class = "userCirc">
+    <a href = "#">
+      <label for = username id = "username"> Username </label>
+      <i class='bx bx-user-circle' ></i>
+    </a>
+  </div>
+
+  <script>
+  let sidebar = document.querySelector(".sidebar");
+  let sidebarBtn = document.querySelector(".bx-arrow-from-left");
+  sidebarBtn.addEventListener("click", ()=>{
+    sidebar.classList.toggle("close");
+  });
+  
+  </script>
+
+<div class = accountText><!--div holding the account num box and button, connnected to many functions-->
+  <p2>Type in an existing account number</p2>
+  <input type ="textbox" id = 'accNum' value = "" size = "10px">
+  <button id = "accbutt">Enter</button>
+</div>
+
+
+
+
+
+  <main>
+    <section class="table_header"></section>
+    <section class="table_body">
+      <table class="userTable" ><!--Uses a site called bloxicons for a ton of free icons for web dev-->
+        <thead>
+          <tr><!--creates the table headers for the table-->
+            <th>Date</th>
+            <th>Description</th>
+            <th>Debits</th>
+            <th>Credits</th>
+          </tr>
+          
+        </thead>
+        <tbody id="tbody1">
+
+          <tr><!--creates the table input boxes for the table-->
+            <td> <input type = "textbox" id = "date" placeholder = "Date"/></td>
+            <td> <input type = "textbox" id = "Description" placeholder = "Description"/></td>
+            <td> <input type = "textbox" id = "debit" placeholder = "Debit" /></td>
+            <td> <input type = "textbox" id = "credit" placeholder = "Credit"/></td>
+          </tr>
+          <tr>
+            <td> <input type = "textbox" id = "date2" placeholder = "Date"/></td>
+            <td> <input type = "textbox" id = "Description2" placeholder = "Description"/></td>
+            <td> <input type = "number" id = "debit2" placeholder = "Debit"/></td>
+            <td> <input type = "number" id = "credit2" placeholder = "Credit"/></td>
+          </tr>
+          <tr>
+            <td> <input type = "textbox" id = "date3" placeholder = "Date"/></td>
+            <td> <input type = "textbox" id = "Description3" placeholder = "Description"/></td>
+            <td> <input type = "number" id = "debit3" placeholder = "Debit"/></td>
+            <td> <input type = "number" id = "credit3" placeholder = "Credit"/></td>
+          </tr>
+          <tr>
+            <td> <input type = "textbox" id = "date4" placeholder = "Date"/></td>
+            <td> <input type = "textbox" id = "Description4" placeholder = "Description"/></td>
+            <td> <input type = "number" id = "debit4" placeholder = "Debit"/></td>
+            <td> <input type = "number" id = "credit4" placeholder = "Credit"/></td>
+          </tr>
+          <tr>
+            <td> <input type = "textbox" id = "date5" placeholder = "Date"/></td>
+            <td> <input type = "textbox" id = "Description5" placeholder = "Description"/></td>
+            <td> <input type = "number" id = "debit5" placeholder = "Debit"/></td>
+            <td> <input type = "number" id = "credit5" placeholder = "Credit"/></td>
+          </tr>
+          <tr>
+            <td> <input type = "textbox" id = "date6" placeholder = "Date"/></td>
+            <td> <input type = "textbox" id = "Description6" placeholder = "Description"/></td>
+            <td> <input type = "number" id = "debit6" placeholder = "Debit"/></td>
+            <td> <input type = "number" id = "credit6" placeholder = "Credit"/></td>
+          </tr>
+            
+
+        </tbody>
+      </table>
+
+    </section>
+
+
+    <div class = "totals">
+      <p2>Balance: </p2>
+      <input type = "number" id = "total" placeholder = "999"/>
+    </div>
+
+
+    <div class = "button">
+      <button id = "Submit" >Submit</button>  <!--The button that is connected to the submit function in css and updates the actual table-->
+      <div class = "tooltip"> Submit Button Tip
+        <span class = "tiptext"> Submits this ledger for the designated account</span>
+      </div>
+    </div>
+
+    <div class = "ibutton">
+      <img id = "img" hidden>
+      <button id = "imgButton" >Select an image</button>  <!--T-->
+      </div>
+    </div>
+
+    <div class = "ubutton">
+      <button id = "upButton" >Upload an image</button>  <!--The button that is connected to the upload img function-->
+      <input type = "textbox" id = "imageN" placeholder = "Name of Image"/>
+    </div>
+    </div>
+
+    <div class = "ebutton">
+      <button id = "Clear" >Clear</button>  <!--The button that is connected to the clear function-->
+      <div class = "tooltip2"> Clear Button Tip
+        <span class = "tiptext2"> Clears all fields for the current ledger </span>
+      </div>
+    </div>
+
+      <div class = "abutton">
+        <button id = "approve" >Approve?</button>  <!--The button that is connected to the approval funcion-->
+        <div class = "tooltip3"> Current Status: 
+          <span class = "tiptext3"> Changes approval status for ledger </span>
+        </div>
+      </div>
+
+
+
+</body>
+<!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-app.js"></script>
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+    https://firebase.google.com/docs/web/setup#available-libraries -->
+<script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-database.js"></script>
+
+<!-- Our script must be loaded after firebase references -->
+<script src= "journal.js">    </script>
+</html>
+ 
